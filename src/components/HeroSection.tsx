@@ -17,8 +17,8 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
               <Heart className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-slate-800">Intentional</h1>
-              <p className="text-sm text-slate-600 -mt-1">Connections</p>
+              <h1 className="text-2xl font-bold text-slate-800">DesiBandhan</h1>
+              <p className="text-sm text-slate-600 -mt-1">Connect • Chat • Explore</p>
             </div>
           </div>
           

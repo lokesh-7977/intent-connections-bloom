@@ -61,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 pt-8 text-center space-y-4">
           <p className="text-gray-300">
-            © 2024 Intentional Connections. All rights reserved.
+            © 2024 DesiBandhan. All rights reserved.
           </p>
           <p className="text-sm text-gray-400">
             Built with love for meaningful connections in a safe, inclusive environment.
