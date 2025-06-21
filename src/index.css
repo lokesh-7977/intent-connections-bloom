@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,20 +38,21 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom Mystic Velvet Theme Colors */
+    --mystic-primary: 261 100% 59%; /* #6D2EFF */
+    --mystic-secondary: 348 100% 71%; /* #FF6F91 */
+    --mystic-accent: 45 100% 67%; /* #FFC857 */
+    --mystic-background: 300 17% 98%; /* #F9F7F9 */
+    --mystic-surface: 317 100% 98%; /* #FFF2FA */
+    --mystic-text: 256 46% 21%; /* #2D1B4E */
   }
 
   .dark {
@@ -99,5 +101,32 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-mystic-primary {
+    color: hsl(var(--mystic-primary));
+  }
+  
+  .text-mystic-secondary {
+    color: hsl(var(--mystic-secondary));
+  }
+  
+  .text-mystic-accent {
+    color: hsl(var(--mystic-accent));
+  }
+  
+  .bg-mystic-primary {
+    background-color: hsl(var(--mystic-primary));
+  }
+  
+  .bg-mystic-secondary {
+    background-color: hsl(var(--mystic-secondary));
+  }
+  
+  .bg-mystic-accent {
+    background-color: hsl(var(--mystic-accent));
   }
 }
