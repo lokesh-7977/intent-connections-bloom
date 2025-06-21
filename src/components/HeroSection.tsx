@@ -1,12 +1,16 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
 
 interface HeroSectionProps {
   onGetStarted: () => void;
 }
 
 const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-brand-lighter via-white to-slate-50 overflow-hidden">
       {/* Header with Logo */}
@@ -18,16 +22,17 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-slate-800">DesiBandhan</h1>
-              <p className="text-sm text-slate-600 -mt-1">Connect • Chat • Explore</p>
+              <p className="text-sm text-slate-600 -mt-1">{t('hero.tagline')}</p>
             </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">How it Works</a>
-            <a href="#pricing" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">Pricing</a>
-            <a href="#about" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">About</a>
+            <a href="#how-it-works" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">{t('nav.howItWorks')}</a>
+            <a href="#pricing" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">{t('nav.pricing')}</a>
+            <a href="#about" className="text-slate-600 hover:text-brand-primary transition-colors font-medium">{t('nav.about')}</a>
+            <LanguageSelector />
             <Button variant="outline" className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white">
-              Login
+              {t('nav.login')}
             </Button>
           </nav>
         </div>
@@ -46,23 +51,17 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-white/70 backdrop-blur-sm rounded-full border border-brand-primary/20 shadow-sm">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-slate-700 font-medium text-sm">Trusted by 10,000+ verified members</span>
+              <span className="text-slate-700 font-medium text-sm">{t('hero.trustIndicator')}</span>
             </div>
             
             {/* Main Headline */}
             <h1 className="text-5xl md:text-7xl font-bold text-slate-800 leading-tight">
-              Where{" "}
-              <span className="bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent bg-clip-text text-transparent">
-                Intentional
-              </span>
-              <br />
-              Connections Begin
+              {t('hero.headline')}
             </h1>
             
             {/* Subtext */}
             <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
-              For open-minded singles, loving couples, and the LGBTQ+ community —{" "}
-              <span className="font-semibold text-slate-700">explore fantasies, share desires, build trust.</span>
+              {t('hero.subtext')}
             </p>
           </div>
 
@@ -74,7 +73,7 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
                 size="lg"
                 className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-primary/90 hover:to-brand-secondary/90 text-white px-10 py-4 text-lg font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
-                Get Started for Free
+                {t('hero.getStarted')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
@@ -83,13 +82,9 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
                 size="lg"
                 className="border-2 border-slate-200 text-slate-700 hover:bg-slate-50 px-10 py-4 text-lg font-medium rounded-2xl"
               >
-                Watch Demo
+                {t('hero.watchDemo')}
               </Button>
             </div>
-            
-            <p className="text-sm text-slate-500">
-              Join thousands of verified members • No credit card required • Free forever plan
-            </p>
           </div>
 
           {/* Trust Indicators */}
@@ -98,24 +93,24 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                 <Users className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="font-semibold text-slate-800">Verified Couples</h3>
-              <p className="text-sm text-slate-600 text-center">Photo verification ensures authentic connections</p>
+              <h3 className="font-semibold text-slate-800">{t('hero.verifiedCouples')}</h3>
+              <p className="text-sm text-slate-600 text-center">{t('hero.verifiedCouplesDesc')}</p>
             </div>
             
             <div className="flex flex-col items-center space-y-3 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/50">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                 <Heart className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold text-slate-800">LGBTQ+ Friendly</h3>
-              <p className="text-sm text-slate-600 text-center">Welcoming all orientations and relationship styles</p>
+              <h3 className="font-semibold text-slate-800">{t('hero.lgbtqFriendly')}</h3>
+              <p className="text-sm text-slate-600 text-center">{t('hero.lgbtqFriendlyDesc')}</p>
             </div>
             
             <div className="flex flex-col items-center space-y-3 p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-slate-200/50">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
                 <MessageCircle className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="font-semibold text-slate-800">Consent First</h3>
-              <p className="text-sm text-slate-600 text-center">Every interaction prioritizes mutual respect</p>
+              <h3 className="font-semibold text-slate-800">{t('hero.consentFirst')}</h3>
+              <p className="text-sm text-slate-600 text-center">{t('hero.consentFirstDesc')}</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
-
 import { Heart, Shield, Clock, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white py-16">
       <div className="max-w-6xl mx-auto px-4">
@@ -61,10 +63,10 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 pt-8 text-center space-y-4">
           <p className="text-gray-300">
-            © 2024 DesiBandhan. All rights reserved.
+            {t('footer.copyright')}
           </p>
           <p className="text-sm text-gray-400">
-            Built with love for meaningful connections in a safe, inclusive environment.
+            {t('footer.tagline')}
           </p>
         </div>
       </div>

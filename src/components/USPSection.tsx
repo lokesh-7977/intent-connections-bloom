@@ -1,23 +1,26 @@
 
 import { Shield, Heart, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const USPSection = () => {
+  const { t } = useLanguage();
+
   const usps = [
     {
       icon: Shield,
-      title: "Verified Couples, Real Connections",
-      description: "Couples undergo photo verification ensuring authentic interactions and building trust within our community."
+      title: t('usp.verifiedTitle'),
+      description: t('usp.verifiedDesc')
     },
     {
       icon: Heart,
-      title: "Consent-First Chat Experience", 
-      description: "Every interaction prioritizes mutual respect and clear consent, creating a safe space for exploration."
+      title: t('usp.consentTitle'), 
+      description: t('usp.consentDesc')
     },
     {
       icon: Users,
-      title: "Safe & Inclusive for LGBTQ+",
-      description: "Proudly welcoming all orientations and relationship styles in a judgment-free, supportive environment."
+      title: t('usp.safeTitle'),
+      description: t('usp.safeDesc')
     }
   ];
 
@@ -26,10 +29,10 @@ const USPSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-            Why Choose Our Platform?
+            {t('usp.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Built on trust, designed for everyone, focused on meaningful connections
+            {t('usp.subtitle')}
           </p>
         </div>
 
