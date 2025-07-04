@@ -1,3 +1,4 @@
+
 import { Heart, Shield, Clock, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -5,67 +6,67 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white py-16">
+    <footer className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-900 text-white py-12 md:py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-purple-300 transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Community Guidelines</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Contact Us</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">FAQs</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Privacy Policy</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Community Guidelines</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Contact Us</a></li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Support</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Safety Tips</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Report Issues</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Feedback</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Help Center</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Safety Tips</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Report Issues</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Feedback</a></li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Community</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-4">Community</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Success Stories</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Events</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Groups</a></li>
-              <li><a href="#" className="hover:text-purple-300 transition-colors">Blog</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Success Stories</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Events</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Groups</a></li>
+              <li><a href="#" className="text-slate-300 hover:text-brand-accent transition-colors text-sm md:text-base">Blog</a></li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">Trust & Safety</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-4">Trust & Safety</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Shield className="w-5 h-5 text-green-400" />
-                <span className="text-sm">Consent Verified</span>
+                <Shield className="w-4 h-4 md:w-5 md:h-5 text-green-400" />
+                <span className="text-sm text-slate-300">Consent Verified</span>
               </div>
               <div className="flex items-center gap-3">
-                <Heart className="w-5 h-5 text-pink-400" />
-                <span className="text-sm">LGBTQ+ Friendly</span>
+                <Heart className="w-4 h-4 md:w-5 md:h-5 text-pink-400" />
+                <span className="text-sm text-slate-300">LGBTQ+ Friendly</span>
               </div>
               <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-blue-400" />
-                <span className="text-sm">24/7 Safety Team</span>
+                <Clock className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
+                <span className="text-sm text-slate-300">24/7 Safety Team</span>
               </div>
               <div className="flex items-center gap-3">
-                <Users className="w-5 h-5 text-purple-400" />
-                <span className="text-sm">Verified Couples</span>
+                <Users className="w-4 h-4 md:w-5 md:h-5 text-purple-400" />
+                <span className="text-sm text-slate-300">Verified Couples</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center space-y-4">
-          <p className="text-gray-300">
+        <div className="border-t border-slate-700 pt-8 text-center space-y-4">
+          <p className="text-slate-300 text-sm md:text-base">
             {t('footer.copyright')}
           </p>
-          <p className="text-sm text-gray-400">
+          <p className="text-xs md:text-sm text-slate-400">
             {t('footer.tagline')}
           </p>
         </div>

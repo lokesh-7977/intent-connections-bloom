@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+				sans: ['Montserrat', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,13 +66,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Light theme colors
+				// Light theme colors - Enhanced for better UX
 				brand: {
-					primary: '#6366f1',
-					secondary: '#ec4899',
-					accent: '#06b6d4',
-					light: '#f8fafc',
-					lighter: '#fcfcfd'
+					primary: '#667eea',
+					secondary: '#764ba2',
+					accent: '#f093fb',
+					light: '#fafbfc',
+					lighter: '#ffffff'
 				}
 			},
 			borderRadius: {
@@ -114,13 +114,22 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
+				},
+				'slide-left': {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'100%': {
+						transform: 'translateX(-100%)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'slide-left': 'slide-left 20s linear infinite'
 			}
 		}
 	},
