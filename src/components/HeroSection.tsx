@@ -3,12 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, MessageCircle, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
+import { Link } from "react-router-dom";
 
-interface HeroSectionProps {
-  onGetStarted: () => void;
-}
-
-const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
+const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
@@ -32,9 +29,6 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
               <a href="#about" className="text-sm md:text-base text-slate-600 hover:text-brand-primary transition-colors font-medium">{t('nav.about')}</a>
             </div>
             <LanguageSelector />
-            <Button variant="outline" className="text-xs md:text-sm px-3 py-2 md:px-4 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white">
-              {t('nav.login')}
-            </Button>
           </nav>
         </div>
       </header>
@@ -67,25 +61,22 @@ const HeroSection = ({ onGetStarted }: HeroSectionProps) => {
             </p>
           </div>
 
-          {/* Enhanced CTA Section */}
+          {/* Single CTA Section - Join Waitlist Only */}
           <div className="space-y-6 md:space-y-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button 
-                onClick={onGetStarted}
-                size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-primary/90 hover:to-brand-secondary/90 text-white px-8 md:px-10 py-3 md:py-4 text-base md:text-lg font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              >
-                {t('hero.getStarted')}
-                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
-              </Button>
+            <div className="flex flex-col items-center justify-center gap-4">
+              <Link to="/waitlist">
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-primary/90 hover:to-brand-secondary/90 text-white px-12 md:px-16 py-4 md:py-6 text-lg md:text-xl font-semibold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-pulse"
+                >
+                  {t('hero.getStarted')}
+                  <ArrowRight className="ml-3 w-5 h-5 md:w-6 md:h-6" />
+                </Button>
+              </Link>
               
-              <Button 
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto border-2 border-slate-200 text-slate-700 hover:bg-slate-50 px-8 md:px-10 py-3 md:py-4 text-base md:text-lg font-medium rounded-2xl"
-              >
-                {t('hero.watchDemo')}
-              </Button>
+              <p className="text-sm text-slate-500 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+                🎉 Join 1000+ people waiting for early access
+              </p>
             </div>
           </div>
 
