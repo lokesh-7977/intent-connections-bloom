@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -122,6 +121,14 @@ export default {
 					'100%': {
 						transform: 'translateX(-100%)'
 					}
+				},
+				'width-grow': {
+					'0%': {
+						width: '0%'
+					},
+					'100%': {
+						width: '80%'
+					}
 				}
 			},
 			animation: {
@@ -129,7 +136,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'slide-left': 'slide-left 20s linear infinite'
+				'slide-left': 'slide-left 20s linear infinite',
+				'width-grow': 'width-grow 3s ease-out'
 			}
 		}
 	},
